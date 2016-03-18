@@ -1,6 +1,8 @@
 <?php
 header('Content-Type: text/plain');
 
+sleep(3);
+
 echo "Server IP: ".$_SERVER['SERVER_ADDR'];
 echo "\nClient IP: ".$_SERVER['REMOTE_ADDR'];
 
