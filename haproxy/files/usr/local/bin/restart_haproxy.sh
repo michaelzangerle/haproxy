@@ -7,8 +7,8 @@ sleep 1
 if [ -f "/var/run/haproxy.pid" ] ; then
     # gracefully restart haproxy
     /usr/local/sbin/haproxy -f /usr/local/etc/haproxy/haproxy_2.cfg -p /var/run/haproxy.pid -sf $(cat /var/run/haproxy.pid) &
-else 
-    /usr/local/sbin/haproxy -f /usr/local/etc/haproxy/haproxy_2.cfg -p /var/run/haproxy.pid & 
+else
+    /usr/local/sbin/haproxy -f /usr/local/etc/haproxy/haproxy_2.cfg -p /var/run/haproxy.pid &
 fi
 
 # allow new requests to come in again
